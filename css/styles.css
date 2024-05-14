@@ -16,7 +16,7 @@ body {
 
 /* Main contant section */
 .main-contant-section {
-  padding: 100px 90px 100px 90px;
+  padding: 30px 90px 100px 90px;
 }
 /* Main contant title*/
 .Main-contant-title,
@@ -141,7 +141,7 @@ body {
   font-style: normal;
   font-weight: bold;
   line-height: 22px;
-  padding-left: 30px;
+  padding-left: 18px;
   margin-left: 5;
 }
 .My-name {
@@ -151,11 +151,11 @@ body {
   line-height: 55px;
   margin-bottom: 25px;
   color: white;
-  padding-left: 16px;
+  padding-left: 18px;
 }
 .contacts-section,
 .Tech-Skills-section {
-  margin: 50px 0 0 40px;
+  margin: 50px 0 0 20px;
 }
 .sidebar-title {
   font-style: normal;
