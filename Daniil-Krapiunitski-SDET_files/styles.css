@@ -1,0 +1,313 @@
+:root {
+    /* Colors */
+    --primary-color: #2c3e50;  /* Dark blue-gray for headings and important text */
+    --secondary-color: #2d7a9e;  /* Bright blue for links and accents */
+    --accent-color: #e74c3c;  /* Red for important elements */
+    --text-color: #34495e;  /* Dark blue-gray for body text */
+    --text-light: #7f8c8d;  /* Light gray for secondary text */
+    --bg-color: #ffffff;  /* White background */
+    --sidebar-bg: #f8f9fa;  /* Light gray for sidebar */
+    --border-color: #e0e0e0;  /* Light gray for borders */
+    
+    /* Typography */
+    --font-family: 'Montserrat', sans-serif;
+    --font-size-base: 12px;
+    --font-size-sm: 10px;
+    --font-size-md: 14px;
+    --font-size-lg: 16px;
+    --font-size-xl: 20px;
+    --font-size-2xl: 24px;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    
+    /* A4 Dimensions */
+    --a4-width: 210mm;
+    --a4-height: 297mm;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* Resume Container */
+.resume-container {
+    width: var(--a4-width);
+    height: var(--a4-height);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: var(--sidebar-bg);
+    padding: var(--spacing-lg);
+    border-right: 1px solid var(--border-color);
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: var(--spacing-md);
+    object-fit: cover;
+    border: 3px solid var(--secondary-color);
+}
+
+.name {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.profession {
+    font-size: var(--font-size-lg);
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: var(--spacing-md);
+}
+
+.section-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.contact-list {
+    list-style: none;
+    margin-bottom: var(--spacing-xl);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.contact-icon {
+    margin-right: var(--spacing-sm);
+    font-size: var(--font-size-md);
+}
+
+.contact-link {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--secondary-color);
+}
+
+.skills-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.skills-subtitle {
+    font-size: var(--font-size-md);
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.skills-list {
+    list-style: none;
+    margin-left: var(--spacing-md);
+}
+
+.skills-list li {
+    margin-bottom: var(--spacing-xs);
+    position: relative;
+    padding-left: var(--spacing-sm);
+}
+
+.skills-list li::before {
+    content: "•";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+}
+
+.languages-list {
+    list-style: none;
+    margin-left: var(--spacing-md);
+}
+
+.languages-list li {
+    margin-bottom: var(--spacing-xs);
+    position: relative;
+    padding-left: var(--spacing-sm);
+}
+
+.languages-list li::before {
+    content: "•";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+}
+
+/* Main Content */
+.main-content {
+    padding: var(--spacing-lg);
+    background-color: var(--bg-color);
+}
+
+.summary {
+    margin-bottom: var(--spacing-lg);
+}
+
+.summary-text {
+    font-size: var(--font-size-md);
+    line-height: 1.6;
+}
+
+.experience {
+    margin-bottom: var(--spacing-lg);
+}
+
+.experience-item {
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.experience-header {
+    margin-bottom: var(--spacing-md);
+}
+
+.position {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.company {
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-right: var(--spacing-sm);
+}
+
+.period {
+    color: var(--text-light);
+    font-size: var(--font-size-sm);
+}
+
+.responsibilities {
+    list-style: none;
+    margin-left: var(--spacing-md);
+}
+
+.responsibilities li {
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    padding-left: var(--spacing-sm);
+}
+
+.responsibilities li::before {
+    content: "•";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+}
+
+.education-item {
+    margin-bottom: var(--spacing-md);
+}
+
+.institution {
+    font-size: var(--font-size-lg);
+    font-weight: 400;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.degree {
+    color: var(--text-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.certification {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.issuer {
+    color: var(--secondary-color);
+    margin-right: var(--spacing-sm);
+}
+
+.projects-list {
+    list-style: none;
+    margin-left: var(--spacing-md);
+}
+
+.project-item {
+    margin-bottom: var(--spacing-sm);
+}
+
+.project-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: var(--primary-color);
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: var(--bg-color);
+    }
+
+    .resume-container {
+        box-shadow: none;
+        margin: 0;
+    }
+
+    .sidebar {
+        background-color: var(--bg-color);
+    }
+
+    .contact-link, .project-link {
+        text-decoration: none;
+    }
+
+    .section-title {
+        border-bottom: 1px solid var(--primary-color);
+    }
+}
